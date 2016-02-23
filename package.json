@@ -2,12 +2,10 @@
   "name": "rx-pub-sub",
   "version": "1.0.0",
   "description": "RxJS PubSub",
-  "main": "index.js",
-  "bin": {
-    "gantry": "./lib/index.js"
-  },
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --loose all --out-dir lib",
+    "test": "mocha --compilers js:babel-core/register tests/*.js"
   },
   "keywords": [
     "rx",
