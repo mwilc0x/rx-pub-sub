@@ -17,5 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "rxjs": "^5.0.0-beta.2"
+  },
+  "devDependencies": {
+    "expect": "^1.14.0",
+    "mocha": "^2.4.5"
   }
 }
