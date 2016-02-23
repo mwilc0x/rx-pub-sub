@@ -1,5 +1,7 @@
 # rx-pub-sub
 
+A tiny publish/subscribe library that utilizes RxJS Subject's.
+
 # Usage
 
 ```js
