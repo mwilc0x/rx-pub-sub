@@ -1,0 +1,23 @@
+{
+  "name": "rx-pub-sub",
+  "version": "1.0.0",
+  "description": "RxJS PubSub",
+  "main": "index.js",
+  "bin": {
+    "gantry": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rx",
+    "publish",
+    "subscribe",
+    "javascript"
+  ],
+  "author": "Mike Wilcox <mwilcox56@gmail.com> (http://github.com/mjw56)",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.0.0-beta.2"
+  }
+}
