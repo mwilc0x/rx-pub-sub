@@ -7,7 +7,7 @@ export class Emitter {
 
   publish(event, data) {
     if (!this.sinks[event]) {
-      console.warn(`${event} does not have registered listeners`);
+      console.warn(`${event} does not have any registered listeners. Publish cancelled.`);
       return;
     }
 
@@ -16,7 +16,7 @@ export class Emitter {
 
   subscribe(event, cb) {
     if (!cb) {
-      console.warn(`No callback provided for subscription.`);
+      console.warn(`No callback provided for subscription. Subscription cancelled.`);
       return;
     }
 
@@ -30,7 +30,7 @@ export class Emitter {
   destroy() {
     for (const s in this.sinks) {
       if (this.sinks.hasOwnProperty(s)) {
-        this.sinks[s].dispose();
+        this.sinks[s].unsubscribe();
       }
     }
 
