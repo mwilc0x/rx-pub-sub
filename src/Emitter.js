@@ -8,16 +8,16 @@ export class Emitter {
   publish(event, data) {
     if (!this.sinks[event]) {
       console.warn(`${event} does not have any registered listeners. Publish cancelled.`);
-      return;
+      return false;
     }
 
-    this.sinks[event].next(data);
+    return this.sinks[event].next(data);
   }
 
   subscribe(event, cb) {
     if (!cb) {
-      console.warn(`No callback provided for subscription. Subscription cancelled.`);
-      return;
+      console.warn('No callback provided for subscription. Subscription cancelled.');
+      return false;
     }
 
     if (!this.sinks[event]) {
