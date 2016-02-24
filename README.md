@@ -4,6 +4,10 @@ A tiny publish/subscribe library that utilizes RxJS Subject's.
 
 # Usage
 
+```bash
+$ npm i -S rx-pub-sub
+```
+
 ```js
 import Emitter from 'rx-pub-sub';
 
